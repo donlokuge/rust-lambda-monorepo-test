@@ -11,7 +11,7 @@
       "options": {
         "cwd": "apps/rust_lambda",
         "commands": [
-          "CARGO_TARGET_DIR=../../dist/target/rust_lambda cargo lambda build --release --bins --output-format zip"
+          "CARGO_TARGET_DIR=../../dist/target/rust_lambda cargo lambda build --release --arm64 --bins --output-format zip"
         ],
         "parallel": false
       }
