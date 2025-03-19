@@ -2,7 +2,7 @@
 [workspace]
 resolver = '2'
 members = [
-	'apps/apps/rust_lambda/rust_lambda',
+	'apps/rust_lambda',
 ]
 
 [profile.release]
