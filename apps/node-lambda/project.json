@@ -12,16 +12,19 @@
       "options": {
         "platform": "node",
         "outputPath": "dist/apps/node-lambda",
-        "format": ["cjs"],
-        "bundle": false,
+        "format": ["esm"],
+        "bundle": true,
+        "thirdParty": true,
+        "minify": true,
         "main": "apps/node-lambda/src/main.ts",
         "tsConfig": "apps/node-lambda/tsconfig.app.json",
         "assets": ["apps/node-lambda/src/assets"],
-        "generatePackageJson": true,
+        
+        "generatePackageJson": false,
         "esbuildOptions": {
-          "sourcemap": true,
+          "sourcemap": false,
           "outExtension": {
-            ".js": ".js"
+            ".js": ".mjs"
           }
         }
       },
@@ -31,7 +34,7 @@
           "esbuildOptions": {
             "sourcemap": false,
             "outExtension": {
-              ".js": ".js"
+              ".js": ".mjs"
             }
           }
         }
