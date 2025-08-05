@@ -26,3 +26,10 @@ This command will:
 1. Compile the Rust code for AWS Lambda
 2. Package it into a deployment-ready ZIP file
 3. Output the ZIP file to `dist/target/rust_lambda/lambda/hello_world_handler/bootstrap.zip`
+
+
+Lambda function handler must be named `bootstrap` for AWS Lambda to recognize it.
+```bash
+  handler        = "bootstrap"
+  runtime        = "provided.al2023"
+```
