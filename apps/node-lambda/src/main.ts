@@ -6,8 +6,7 @@ const tableName = process.env.DYNAMO_TABLE!;
 
 export const handler: APIGatewayProxyHandler = async (event) => {
   try {
-    const body = JSON.parse(event.body || '{}');
-    const name = body.name;
+    const name = event.name;
 
     if (!name) {
       return {
